@@ -147,20 +147,13 @@ html    {
 
 .seccionPrincipal   {
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     background-image: url(../images/fondoSecciones.jpg);
+    background-position: center;
     background-size: cover;
     color: #F1F2F6;
     min-height: 65vh;
     text-shadow: 0.2rem 0.2rem 1rem #000000;
-}
-
-.seccionesQuienesSomos      {
-    display: inline-block;
-    position: relative;
-    margin: 3rem;
-    vertical-align: top;
-    text-align: justify;
 }
 
 .seccionPrincipal h1   {
@@ -168,31 +161,32 @@ html    {
     text-underline-offset: 1.5rem;
     text-decoration-color: #FF8100;
     font-size: 4rem;
+    font-weight: bold;
     padding: 4rem;
-    text-align: center;
 }
 
 .seccionPrincipal h2   {
     font-size: 3rem;
+    font-weight: bold;
     margin: 3rem;
-    text-align: center;
     color: #FF8100;
 }
 
-.seccionesQuienesSomos img  {
+.seccionPrincipal__quienesSomos img  {
     overflow: hidden;
-    width: 50rem;
+    max-width: 100%;
+    height: auto;
     box-shadow: 0.2rem 0.2rem 1rem #000000;
     margin-bottom: 2rem ;
 }
 
 #quienesSomos   {
     width: 70%;
+    margin: auto;
 }
 
 #mision, #valores     {
-    width: min-content;
-    margin: 5rem;
+    margin: 7.5rem 2.5rem 7.5rem 2.5rem;
 }
 
 /*---------------------------------------- Estilos del Main - Servicios ------------------------------------*/
