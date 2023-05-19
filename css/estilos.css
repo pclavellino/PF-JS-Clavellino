@@ -220,22 +220,30 @@ html    {
 
 /*---------------------------------------- Estilos del Main - Contacto -------------------------------------*/
 
-.seccionesContacto      {
-    display: inline-block;
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 3rem;
+#seccionContacto        {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.seccionPrincipal__Contenedor     {
     width: 100%;
 }
 
+#formularioContacto     {
+    width: 35%;
+    margin: auto;
+}
+
 .formulario    {
-    display: inline-block;
-    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
     margin-bottom: 5rem;
 }
 
 .formulario label, input, textarea     {
-    display: inline-block;
     width: 100%;
 }
 
@@ -261,6 +269,7 @@ html    {
     padding: 0.5rem;
     margin: 2rem;
     text-shadow: 0.2rem 0.2rem 1rem #000000;
+    align-self: center;
 }
 
 .botonEnviar:hover      {
@@ -399,6 +408,10 @@ html    {
         font-size: 3rem;
     }
 
+    #formularioContacto     {
+        width: 60%;
+    }
+
     #footer    {
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
@@ -419,6 +432,11 @@ html    {
 }
 
 @media screen and (max-width: 540px) {
+
+    #formularioContacto     {
+        width: 80%;
+    }
+
     #footer    {
     grid-template-columns: 1fr;
     grid-template-areas:
