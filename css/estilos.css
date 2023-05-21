@@ -185,16 +185,17 @@ html    {
 }
 
 #mision, #valores     {
-    margin: 7.5rem 2.5rem 7.5rem 2.5rem;
+    margin: 5rem 2.5rem 5rem 2.5rem;
 }
 
 /*---------------------------------------- Estilos del Main - Servicios ------------------------------------*/
 
 .servicio  {
-    display: inline-block;
-    vertical-align: top;
-    width: 25%;
-    margin: 2rem 5rem 6rem 5rem;
+    width: 85%;
+    margin: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
 }
 
 .servicio p     {
@@ -203,7 +204,7 @@ html    {
 
 .iconoDeServicio    {
     width: 25rem;
-    margin: 2rem;
+    margin: 0.5rem;
 }
 
 /*---------------------------------------- Estilos del Main - Area Clientes --------------------------------*/
