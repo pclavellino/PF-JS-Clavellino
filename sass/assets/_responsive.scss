@@ -1,0 +1,62 @@
+@media screen and (max-width: 960px)  {
+
+    .presentacion__mensajePrincipal {
+        h1  {
+            font-size: 5rem;
+        }
+        p   {
+            font-size: 3rem;
+        }
+    }
+
+    #formularioContacto     {
+        width: 60%;
+    }
+
+    #footer    {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "mapaDelSitio contacto"  
+        "horario horario"
+        "logoFooter logoFooter"
+        "redes redes"
+        "copyright copyright"    
+        ;
+        column-gap: 0.5rem;
+        }
+
+    .footer__secciones  {
+        width: 35vw;
+    }
+
+    .logoWhatsapp   {
+        bottom: 4rem;
+        right: 4rem;
+        width: 5rem;
+    }
+
+
+}
+
+@media screen and (max-width: 540px) {
+
+    #formularioContacto     {
+        width: 80%;
+    }
+
+    #footer    {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "mapaDelSitio" 
+    "contacto" 
+    "horario"
+    "logoFooter"
+    "redes"
+    "copyright"    
+    ;
+    }
+
+    .footer__secciones      {
+        width: 70vw;
+    }
+}

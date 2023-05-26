@@ -1,0 +1,50 @@
+#header  {
+    width: 100%;
+    background-color: #FF8100;
+    grid-area: header;
+}
+
+.header__navbar     {
+    background-color: #FF8100;
+    width: 100%;
+}
+
+.header__navbar__container   {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header__logo__imagen  {
+    width: 250px;
+    margin: 0.5rem;
+}
+
+.header__nav__container__ul {
+    margin: 1rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-shadow: 0.2rem 0.2rem 1rem #000000;
+    flex-grow: 0;
+    li {
+        margin: 1.5rem;
+        border-bottom: 3px solid #FF8100;
+        a   {
+            color: #F1F2F6;
+        }
+        &:hover  {
+            margin: 1.5rem;
+            border-bottom: 3px solid #541388;
+        }
+    }
+}
+
+.navbar-toggler      {
+    border: 2px solid #541388;
+    font-size: 2rem;
+    width: 5rem;
+    height: 5rem;
+}
+
+.nav-link:hover     {
+    color: #541388;
+}

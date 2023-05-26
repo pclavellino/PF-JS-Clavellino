@@ -1,0 +1,112 @@
+#footer     {
+    grid-area: footer;
+    border-top: 7rem solid #FF8100;
+    font-size: 1.6rem;
+    background-color: #e7e5e5;
+    padding-top: 5rem;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
+    grid-template-areas:
+    ". mapaDelSitio contacto horario ."
+    ". . logoFooter . ."
+    ". . redes . ."
+    "copyright copyright copyright copyright copyright"    
+    ;
+    column-gap: 5rem;
+    justify-content: stretch;
+    justify-items: center;
+    align-content: start;
+}
+
+.footer__secciones    {
+    width: 20vw;
+    margin: 2rem;
+    text-align: left;
+}
+
+.footer__secciones__h2     {
+    padding-bottom: 0.4rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #541388;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #541388;
+}
+
+.footer__secciones__ul      {
+    padding: 0;
+    li  {
+        list-style: none;
+        padding-bottom: 0.3rem;
+    }
+    a   {
+        text-decoration: none;
+        color: #000000;
+    }
+}
+
+.logoRedesSociales  {
+    width: 3rem;
+}
+
+#mapaDelSitio   {
+    grid-area: mapaDelSitio;
+    li  {
+        border-bottom: 1px solid #541388;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+#contacto       {
+    grid-area: contacto;
+}
+
+#redes      {
+    grid-area: redes;
+    text-align: center;
+}
+
+#horarios       {
+    grid-area: horario;
+}
+
+#logoFooter     {
+    grid-area: logoFooter;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+        width: 50%;
+        height: 50%;
+        object-fit: contain;
+    }
+}
+
+#copyright  {
+    grid-area: copyright;
+    width: 100%;
+    font-size: 1.2rem;
+    background-color: #FF8100;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 5rem;
+}
+
+.logoWhatsapp   {
+    position: fixed;
+    z-index: 1;
+    width: 7rem;
+    bottom: 7rem;
+    right: 7rem;
+    a {
+        img {
+            width: 100%;
+        }
+    }  
+}
+
+
+

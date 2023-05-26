@@ -1,0 +1,62 @@
+#main    {
+    width: 100%;
+    border-top: 5px solid #541388;
+    border-bottom: 5px solid #541388;
+    grid-area: main;
+}
+
+#presentacion    {
+    color: #F1F2F6;
+    position: relative;
+    min-height: 65vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.presentacion__mensajePrincipal     {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    h1  {
+        font-size: 7rem;
+        font-weight: bold;
+        margin: 2rem;    
+        text-shadow: 1rem 1rem 1rem #000000;
+        span    {
+            color: #FF8100;
+        }
+    }
+    p   {
+        font-size: 4rem;
+        margin: 5rem;
+        text-shadow: 1rem 1rem 1rem #000000;
+    }
+}
+
+.presentacion__botonContacto      {
+    background-color: #FF8100;
+    text-decoration: none;
+    font-size: 2.5rem;
+    color: #F1F2F6;
+    padding: 1rem 6rem;
+    border-radius: 3rem;
+    margin: 4rem;
+    text-shadow: 0.2rem 0.2rem 1rem #000000;
+    &:hover    {
+        background-color: #541388;
+    }
+}
+
+.presentacion__videoFondo   {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
