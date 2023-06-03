@@ -44,9 +44,14 @@ html {
 .header__nav__container__ul li {
   margin: 1.5rem;
   border-bottom: 3px solid #FF8100;
+  transition: border-bottom 0.5s;
 }
 .header__nav__container__ul li a {
   color: #F1F2F6;
+  transition: color 0.5s;
+}
+.header__nav__container__ul li a:hover {
+  color: #541388;
 }
 .header__nav__container__ul li:hover {
   margin: 1.5rem;
@@ -58,10 +63,6 @@ html {
   font-size: 2rem;
   width: 5rem;
   height: 5rem;
-}
-
-.nav-link:hover {
-  color: #541388;
 }
 
 .seccionPrincipal {
@@ -187,9 +188,14 @@ html {
   width: 7rem;
   bottom: 7rem;
   right: 7rem;
+  border-radius: 15%;
+  transition: box-shadow 0.5s;
 }
 .logoWhatsapp a img {
   width: 100%;
+}
+.logoWhatsapp:hover {
+  box-shadow: 0px 0px 20px #28531f;
 }
 
 #main {
@@ -240,6 +246,7 @@ html {
   border-radius: 3rem;
   margin: 4rem;
   text-shadow: 0.2rem 0.2rem 1rem #000000;
+  transition: background-color 0.5s;
 }
 .presentacion__botonContacto:hover {
   background-color: #541388;
@@ -297,7 +304,7 @@ html {
   align-items: center;
 }
 .seccionPrincipal__areaClientes p {
-  margin-bottom: 7rem;
+  margin-bottom: 5rem;
 }
 
 #seccionContacto {
@@ -312,7 +319,7 @@ html {
 }
 
 #formularioContacto {
-  width: 35%;
+  width: 30%;
   margin: auto;
 }
 
@@ -330,16 +337,23 @@ html {
 }
 .formulario input {
   width: 100%;
-  height: 3rem;
+  height: 3.5rem;
 }
 .formulario textarea {
   width: 100%;
+  margin-bottom: 3rem;
+}
+.formulario div {
+  width: 80%;
+  display: flex;
+  align-self: center;
+  justify-content: center;
 }
 
-.botonEnviar {
+.botonFormulario {
   background-color: #FF8100;
   font-size: 2.5rem;
-  width: 25rem;
+  width: 10rem;
   height: min-content;
   box-sizing: content-box;
   border: 0;
@@ -349,8 +363,9 @@ html {
   margin: 2rem;
   text-shadow: 0.2rem 0.2rem 1rem #000000;
   align-self: center;
+  transition: background-color 0.5s;
 }
-.botonEnviar:hover {
+.botonFormulario:hover {
   background-color: #541388;
 }
 

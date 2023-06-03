@@ -28,8 +28,13 @@
     li {
         margin: 1.5rem;
         border-bottom: 3px solid #FF8100;
+        transition: border-bottom 0.5s ;
         a   {
             color: #F1F2F6;
+            transition: color 0.5s;
+            &:hover {
+                color: #541388;
+            }
         }
         &:hover  {
             margin: 1.5rem;
@@ -43,8 +48,4 @@
     font-size: 2rem;
     width: 5rem;
     height: 5rem;
-}
-
-.nav-link:hover     {
-    color: #541388;
 }

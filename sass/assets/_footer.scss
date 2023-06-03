@@ -101,11 +101,17 @@
     width: 7rem;
     bottom: 7rem;
     right: 7rem;
+    border-radius: 15%;
+    transition: box-shadow 0.5s;
     a {
         img {
-            width: 100%;
+            width: 100%;            
         }
-    }  
+    }
+    &:hover {
+        box-shadow: 0px 0px 20px #28531f ;
+    }
+
 }
 
 
