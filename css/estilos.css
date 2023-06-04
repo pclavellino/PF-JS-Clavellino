@@ -289,6 +289,44 @@ html {
   text-align: justify;
 }
 
+@keyframes autoSlider {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-3900px);
+  }
+}
+.nuestrasMarcas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7e5e5;
+  border-top: 7rem solid #FF8100;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.nuestrasMarcas .slider {
+  width: 80vw;
+  overflow: hidden;
+  margin: 4rem;
+}
+.nuestrasMarcas .slider-track {
+  display: flex;
+  width: 7800px;
+  height: 150px;
+  animation: autoSlider 40s linear infinite;
+}
+.nuestrasMarcas .marcas {
+  margin: 0rem 2.5rem 0rem 2.5rem;
+}
+.nuestrasMarcas .marcas img {
+  object-fit: contain;
+  width: 250px;
+  height: 100px;
+}
+
 .iconoDeServicio {
   width: 25rem;
   margin: 0.5rem;

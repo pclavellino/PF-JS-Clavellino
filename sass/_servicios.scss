@@ -9,6 +9,41 @@
     }
 }
 
+@keyframes autoSlider   {
+    0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-300px * 13))}
+}
+
+.nuestrasMarcas     {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #e7e5e5;
+    border-top: 7rem solid #FF8100;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    .slider     {
+        width: 80vw;
+        overflow: hidden;
+        margin: 4rem;
+    }
+    .slider-track   {
+        display: flex;
+        width: calc(300px * 26);
+        height: 150px;
+        animation: autoSlider 40s linear infinite;
+    }
+    .marcas  {
+        margin: 0rem 2.5rem 0rem 2.5rem;
+        img     {
+            object-fit: contain;
+            width: 250px;
+            height: 100px;
+        }
+    }
+}
+
 .iconoDeServicio    {
     width: 25rem;
     margin: 0.5rem;
