@@ -387,7 +387,7 @@ html {
   justify-content: center;
 }
 
-.botonFormulario {
+.botonFormulario, .botonBorrar {
   background-color: #FF8100;
   font-size: 2.5rem;
   width: 10rem;
@@ -400,10 +400,17 @@ html {
   margin: 2rem;
   text-shadow: 0.2rem 0.2rem 1rem #000000;
   align-self: center;
-  transition: background-color 0.5s;
+  transition: box-shadow 0.5s;
 }
-.botonFormulario:hover {
+.botonFormulario:hover, .botonBorrar:hover {
+  box-shadow: 0px 0px 20px #FF8100;
+}
+
+.botonBorrar {
   background-color: #541388;
+}
+.botonBorrar:hover {
+  box-shadow: 0px 0px 20px #541388;
 }
 
 .mapa {

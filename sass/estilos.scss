@@ -1,15 +1,16 @@
-@use "./assets/normalize";
-@use "./assets/header" ;
-@use "./assets/seccionPrincipal";
-@use "./assets/footer";
+@use "assets/normalize";
+@use "assets/header";
+@use "assets/seccionPrincipal";
+@use "assets/footer";
 
-@use "./index";
-@use "./quienesSomos";
-@use "./servicios";
-@use "./areaClientes";
-@use "./contacto";
 
-@use "./assets/responsive";
+@use "index";
+@use "quienesSomos";
+@use "servicios";
+@use "areaClientes";
+@use "contacto";
+
+@use "assets/responsive";
 
 
 
