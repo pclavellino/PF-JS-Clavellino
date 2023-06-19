@@ -1,3 +1,5 @@
+@use "assets/colores";
+
 #seccionContacto        {
     display: flex;
     flex-direction: column;
@@ -28,11 +30,20 @@
     input   {
         width: 100%;
         height: 3.5rem;
+        &:focus     {
+            border: 3px solid colores.$colorNaranja;
+            box-shadow: 0px 0px 15px colores.$colorNaranja;
+        }
     }
     textarea    {
         width: 100%;
         margin-bottom: 3rem;
+        &:focus     {
+            border: 3px solid colores.$colorNaranja;
+            box-shadow: 0px 0px 15px colores.$colorNaranja;
+        }
     }
+
     div     {
         width: 80%;
         display: flex;
@@ -42,29 +53,29 @@
 }
 
 .botonFormulario    {
-    background-color: #FF8100;
+    background-color: colores.$colorNaranja;
     font-size: 2.5rem;
     width: 10rem;
     height: min-content;
     box-sizing: content-box;
-    border: 0;
-    color: #F1F2F6;
+    border: none;
+    color: colores.$colorBeige;
     border-radius: 3rem;
     padding: 0.5rem;
     margin: 2rem;
-    text-shadow: 0.2rem 0.2rem 1rem #000000;
+    text-shadow: 0.2rem 0.2rem 1rem colores.$colorNegro;
     align-self: center;
     transition: box-shadow 0.5s;
     &:hover     {
-        box-shadow: 0px 0px 20px #FF8100;
+        box-shadow: 0px 0px 20px colores.$colorNaranja;
     }
 }
 
 .botonBorrar    {
     @extend .botonFormulario;
-    background-color: #541388;
+    background-color: colores.$colorVioleta;
     &:hover     {
-        box-shadow: 0px 0px 20px #541388;
+        box-shadow: 0px 0px 20px colores.$colorVioleta;
     }
 }
 

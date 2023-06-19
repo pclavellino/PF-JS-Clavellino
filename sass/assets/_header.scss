@@ -1,11 +1,13 @@
+@use "colores";
+
 #header  {
     width: 100%;
-    background-color: #FF8100;
+    background-color: colores.$colorNaranja;
     grid-area: header;
 }
 
 .header__navbar     {
-    background-color: #FF8100;
+    background-color: colores.$colorNaranja;
     width: 100%;
 }
 
@@ -23,28 +25,28 @@
     margin: 1rem;
     font-size: 1.8rem;
     font-weight: 600;
-    text-shadow: 0.2rem 0.2rem 1rem #000000;
+    text-shadow: 0.2rem 0.2rem 1rem colores.$colorNegro;
     flex-grow: 0;
     li {
         margin: 1.5rem;
-        border-bottom: 3px solid #FF8100;
+        border-bottom: 3px solid colores.$colorNaranja;
         transition: border-bottom 0.5s ;
         a   {
-            color: #F1F2F6;
+            color: colores.$colorBeige;
             transition: color 0.5s;
             &:hover {
-                color: #541388;
+                color: colores.$colorVioleta;
             }
         }
         &:hover  {
             margin: 1.5rem;
-            border-bottom: 3px solid #541388;
+            border-bottom: 3px solid colores.$colorVioleta;
         }
     }
 }
 
 .navbar-toggler      {
-    border: 2px solid #541388;
+    border: 2px solid colores.$colorVioleta;
     font-size: 2rem;
     width: 5rem;
     height: 5rem;

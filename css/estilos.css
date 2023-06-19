@@ -47,7 +47,7 @@ html {
   transition: border-bottom 0.5s;
 }
 .header__nav__container__ul li a {
-  color: #F1F2F6;
+  color: #e7e5e5;
   transition: color 0.5s;
 }
 .header__nav__container__ul li a:hover {
@@ -71,7 +71,7 @@ html {
   background-image: url(../images/fondoSecciones.jpg);
   background-position: center;
   background-size: cover;
-  color: #F1F2F6;
+  color: #e7e5e5;
   min-height: 65vh;
   text-shadow: 0.2rem 0.2rem 1rem #000000;
 }
@@ -206,7 +206,7 @@ html {
 }
 
 #presentacion {
-  color: #F1F2F6;
+  color: #e7e5e5;
   position: relative;
   min-height: 65vh;
   overflow: hidden;
@@ -241,7 +241,7 @@ html {
   background-color: #FF8100;
   text-decoration: none;
   font-size: 2.5rem;
-  color: #F1F2F6;
+  color: #e7e5e5;
   padding: 1rem 6rem;
   border-radius: 3rem;
   margin: 4rem;
@@ -376,9 +376,17 @@ html {
   width: 100%;
   height: 3.5rem;
 }
+.formulario input:focus {
+  border: 3px solid #FF8100;
+  box-shadow: 0px 0px 15px #FF8100;
+}
 .formulario textarea {
   width: 100%;
   margin-bottom: 3rem;
+}
+.formulario textarea:focus {
+  border: 3px solid #FF8100;
+  box-shadow: 0px 0px 15px #FF8100;
 }
 .formulario div {
   width: 80%;
@@ -393,8 +401,8 @@ html {
   width: 10rem;
   height: min-content;
   box-sizing: content-box;
-  border: 0;
-  color: #F1F2F6;
+  border: none;
+  color: #e7e5e5;
   border-radius: 3rem;
   padding: 0.5rem;
   margin: 2rem;

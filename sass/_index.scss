@@ -1,12 +1,14 @@
+@use "assets/colores";
+
 #main    {
     width: 100%;
-    border-top: 5px solid #541388;
-    border-bottom: 5px solid #541388;
+    border-top: 5px solid colores.$colorVioleta;
+    border-bottom: 5px solid colores.$colorVioleta;
     grid-area: main;
 }
 
 #presentacion    {
-    color: #F1F2F6;
+    color: colores.$colorBeige;
     position: relative;
     min-height: 65vh;
     overflow: hidden;
@@ -25,29 +27,29 @@
         font-size: 7rem;
         font-weight: bold;
         margin: 2rem;    
-        text-shadow: 1rem 1rem 1rem #000000;
+        text-shadow: 1rem 1rem 1rem colores.$colorNegro;
         span    {
-            color: #FF8100;
+            color: colores.$colorNaranja;
         }
     }
     p   {
         font-size: 4rem;
         margin: 5rem;
-        text-shadow: 1rem 1rem 1rem #000000;
+        text-shadow: 1rem 1rem 1rem colores.$colorNegro;
     }
 }
 
 .presentacion__botonContacto      {
-    background-color: #FF8100;
+    background-color: colores.$colorNaranja;
     text-decoration: none;
     font-size: 2.5rem;
-    color: #F1F2F6;
+    color: colores.$colorBeige;
     padding: 1rem 6rem;
     border-radius: 3rem;
     margin: 4rem;
-    text-shadow: 0.2rem 0.2rem 1rem #000000;
+    text-shadow: 0.2rem 0.2rem 1rem colores.$colorNegro;
     &:hover    {
-        background-color: #541388;
+        background-color: colores.$colorVioleta;
     }
 }
 

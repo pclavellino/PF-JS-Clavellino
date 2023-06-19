@@ -1,3 +1,5 @@
+@use "assets/colores";
+
 .servicio  {
     width: 85%;
     margin: auto;
@@ -19,8 +21,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #e7e5e5;
-    border-top: 7rem solid #FF8100;
+    background-color: colores.$colorBeige;
+    border-top: 7rem solid colores.$colorNaranja;
     padding-top: 3rem;
     padding-bottom: 3rem;
     .slider     {
