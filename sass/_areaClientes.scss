@@ -1,3 +1,5 @@
+@use "assets/colores";
+
 .seccionPrincipal__areaClientes        {
     width: 70%;
     margin: auto;
@@ -8,4 +10,31 @@
     p   {
         margin-bottom: 5rem;
     }
+}
+
+.modal-content  {
+    background-color: colores.$colorBeige;
+    padding: 1rem;
+    border: none;
+    h5  {
+        font-size: 2.4rem;
+        font-weight: bold;
+    }
+    p, li {
+        font-size: 1.6rem;
+    }
+
+    .btn-primary  {
+        font-size: 2rem;
+        background-color: colores.$colorNaranja;
+        border: none;
+        border-radius: 3rem;
+        padding: 5px 20px 5px 20px;
+        &:hover {
+            background-color: colores.$colorVioleta;
+        }
+    }
+
+
+
 }

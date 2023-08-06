@@ -344,6 +344,29 @@ html {
   margin-bottom: 5rem;
 }
 
+.modal-content {
+  background-color: #e7e5e5;
+  padding: 1rem;
+  border: none;
+}
+.modal-content h5 {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.modal-content p, .modal-content li {
+  font-size: 1.6rem;
+}
+.modal-content .btn-primary {
+  font-size: 2rem;
+  background-color: #FF8100;
+  border: none;
+  border-radius: 3rem;
+  padding: 5px 20px 5px 20px;
+}
+.modal-content .btn-primary:hover {
+  background-color: #541388;
+}
+
 #seccionContacto {
   display: flex;
   flex-direction: column;

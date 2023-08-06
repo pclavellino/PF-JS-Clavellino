@@ -50,12 +50,20 @@
             <article class="seccionPrincipal">
                 <h1 data-aos="fade-up">Área Clientes</h1>
                 <section class="seccionPrincipal__areaClientes" data-aos="fade-up" data-aos-delay="250">
-                    <p>Si dejaste un equipo a reparar con nosotros, ingresa a continuacion el número de Orden de Servicio para conocer su estado:</p>
+                    <h2>Consultá es estado de tu reparación</h2>
+                    <p>Si dejaste un equipo a reparar con nosotros, ingresa a continuacion los 6 numeros de su Orden de Servicio para conocer su estado:</p>
                     <form class="formulario">
-                        <label for="ordenServicio">Orden de Servicio:</label>
+                        <label for="ordenServicio">Orden de Servicio (6 numeros):</label>
                         <input type="text" name="ordenServicio" id="ordenServicio" required>
-                        <input type="submit" value="Consultar" class="botonFormulario">
-                    </form>
+                        <input type="button" value="Consultar" id="botonConsultar" class="botonFormulario btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    </form>                        
+                </section> 
+                <section class="seccionPrincipal__areaClientes" data-aos="fade-up" data-aos-delay="500">
+                    <h2>Presupuestá tu abono mensual</h2>
+                    <p>Completa el formulario para obtener un presupuesto de tu abono mensual en base a los equipos que tenes en tu empresa:</p>
+                    <form class="formulario">
+                        
+                    </form>                        
                 </section>       
             </article> 
         </main>
@@ -112,6 +120,23 @@
         <script>
             AOS.init();
         </script>
+        <script src="../js/areaClientes.js"></script>
     </div>    
 </body>
+<!-- Modal -->
+<div class= "modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Estado del Equipo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id= "estadoReparacion" class="modal-body">
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>     
 </html>
