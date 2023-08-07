@@ -47,24 +47,52 @@
             </nav>
         </header>
         <main id="main">
-            <article class="seccionPrincipal">
-                <h1 data-aos="fade-up">Área Clientes</h1>
-                <section class="seccionPrincipal__areaClientes" data-aos="fade-up" data-aos-delay="250">
-                    <h2>Consultá es estado de tu reparación</h2>
-                    <p>Si dejaste un equipo a reparar con nosotros, ingresa a continuacion los 6 numeros de su Orden de Servicio para conocer su estado:</p>
-                    <form class="formulario">
-                        <label for="ordenServicio">Orden de Servicio (6 numeros):</label>
-                        <input type="text" name="ordenServicio" id="ordenServicio" required>
-                        <input type="button" value="Consultar" id="botonConsultar" class="botonFormulario btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    </form>                        
-                </section> 
-                <section class="seccionPrincipal__areaClientes" data-aos="fade-up" data-aos-delay="500">
-                    <h2>Presupuestá tu abono mensual</h2>
-                    <p>Completa el formulario para obtener un presupuesto de tu abono mensual en base a los equipos que tenes en tu empresa:</p>
-                    <form class="formulario">
-                        
-                    </form>                        
-                </section>       
+            <article class="seccionPrincipal container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1 data-aos="fade-up">Área Clientes</h1>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-12 col-lg-5">
+                        <section class="seccionPrincipal__areaClientes" data-aos="fade-up" data-aos-delay="250">
+                        <h2>Consultá el estado de tu reparación</h2>
+                        <p>Si dejaste un equipo a reparar con nosotros, ingresa a continuacion los 6 numeros de su Orden de Servicio para conocer su estado:</p>
+                        <form class="formulario">
+                            <label for="ordenServicio">Orden de Servicio (6 digitos):</label>
+                            <input type="text" name="ordenServicio" id="ordenServicio" required>
+                            <input type="button" value="Consultar" id="botonConsultar" class="botonFormulario" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        </form>                        
+                        </section> 
+                    </div>
+                    <div class="col-sm-12 col-lg-5"> 
+                        <section class="seccionPrincipal__areaClientes" data-aos="fade-up" data-aos-delay="250">
+                        <h2>Presupuestá tu abono mensual</h2>
+                        <p>Completa el formulario para obtener un presupuesto de tu abono mensual en base a los equipos que tenes en tu empresa:</p>
+                        <form class="formulario" id="formularioPresupuesto">
+                            <label for="servidores">Cantidad de Servidores en su empresa:</label>
+                            <input type="text" name="servidores" id="servidores">
+                            <label for="pcs">Cantidad de PC/Notebook en su empresa:</label>
+                            <input type="text" name="pcs" id="pcs">
+                            <label for="impresoras">Cantidad de impresoras en su empresa:</label>
+                            <input type="text" name="impresoras" id="impresoras">
+                            <div id="serviciosAdicionales">
+                                <h5>Servicios adicionales:</h5>
+                                <label for="camarasSeguridad">
+                                    <input type="checkbox" id= "camarasSeguridad" value="camarasSeguridad">
+                                    Mantenimiento de sistema de Camaras de Seguridad
+                                </label>
+                                <label for="telefonia">
+                                    <input type="checkbox" id= "telefonia" value="telefonia">
+                                    Mantenimiento de red de telefonia
+                                </label>
+                            </div>
+                            <input type="button" value="Presupuestar" id="botonPresupuestar" class="botonFormulario">
+
+                        </form>                        
+                        </section>  
+                    </div>
+                </div>     
             </article> 
         </main>
         <footer id="footer">

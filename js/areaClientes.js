@@ -73,6 +73,7 @@ function consultarReparacion() {
     }
 }
 
+
 let botonConsultar = document.getElementById("botonConsultar");
 let ordenServicio = document.getElementById("ordenServicio");
 
