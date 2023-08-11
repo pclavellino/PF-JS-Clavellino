@@ -341,13 +341,12 @@ html {
   align-items: center;
 }
 .seccionPrincipal__areaClientes p {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
-.seccionPrincipal__areaClientes #botonConsultar {
-  width: 20rem;
-}
-.seccionPrincipal__areaClientes #botonPresupuestar {
-  width: 20rem;
+
+#login {
+  padding: 2rem;
+  border: 3px solid #FF8100;
 }
 
 #serviciosAdicionales {
@@ -416,7 +415,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: start;
-  margin-bottom: 5rem;
+  margin-bottom: 15rem;
 }
 .formulario label {
   width: 100%;
@@ -448,7 +447,7 @@ html {
 .botonFormulario, .botonBorrar {
   background-color: #FF8100;
   font-size: 2.5rem;
-  width: 10rem;
+  width: 20rem !important;
   height: min-content;
   box-sizing: content-box;
   border: none;

@@ -56,12 +56,46 @@
                 <div class="row justify-content-center">
                     <div class="col-sm-12 col-lg-5">
                         <section class="seccionPrincipal__areaClientes" data-aos="fade-up" data-aos-delay="250">
+                            <h2>Registrate</h2>
+                            <p>Registrate para consultar y gestionar tus presupuestos y reparaciones</p>
+                            <form class="formulario">
+                                <label for="regNombre">Nombre
+                                    <input type="text" name="regNombre" id="regNombre" required>
+                                </label>
+                                <label for="regMail">Dirección de Correo
+                                    <input type="mail" name="regMail" id="regMail" required>
+                                </label>
+                                <label for="regContraseña">Contraseña
+                                    <input type="text" name="regContraseña" id="regContraseña" required>
+                                </label>
+                                <input type="button" value="Registrarse" id="registrarse" class="botonFormulario">
+                            </form>
+                        </section>
+                    </div>    
+                    <div class="col-sm-12 col-lg-5">
+                        <section class="seccionPrincipal__areaClientes" data-aos="fade-up" data-aos-delay="250" id="login">
+                            <h2>Iniciar Sesión</h2>
+                            <form class="formulario">
+                                <label for="loginMail">Direccion de Correo
+                                    <input type="text" name="mail" id="loginMail">
+                                </label>
+                                <label for="loginContraseña">Contraseña
+                                    <input type="text" name="contraseña" id="loginContraseña">
+                                </label>
+                                <input type="button" value="Iniciar Sesión" id="iniciarSesion" class="botonFormulario">
+                            </form>
+                        </section>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-12 col-lg-5">
+                        <section class="seccionPrincipal__areaClientes" data-aos="fade-up" data-aos-delay="250">
                         <h2>Consultá el estado de tu reparación</h2>
                         <p>Si dejaste un equipo a reparar con nosotros, ingresa a continuacion los 6 numeros de su Orden de Servicio para conocer su estado:</p>
                         <form class="formulario">
                             <label for="ordenServicio">Orden de Servicio (6 digitos):</label>
                             <input type="text" name="ordenServicio" id="ordenServicio" required>
-                            <input type="button" value="Consultar" id="botonConsultar" class="botonFormulario" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <input type="button" value="Consultar" id="botonConsultar" class="botonFormulario" data-bs-toggle="modal" data-bs-target="#modalReparaciones">
                         </form>                        
                         </section> 
                     </div>
@@ -88,7 +122,6 @@
                                 </label>
                             </div>
                             <input type="button" value="Presupuestar" id="botonPresupuestar" class="botonFormulario">
-
                         </form>                        
                         </section>  
                     </div>
@@ -143,28 +176,34 @@
                 </a> 
             </div>
         </footer>
+
+        <!---------------------------------------------- Ventana Modal ----------------------------------------------->
+
+        <div class= "modal fade" id="modalReparaciones" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Estado del Equipo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div id= "estadoReparacion" class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>    
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init();
         </script>
-        <script src="../js/areaClientes.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="../js/registrarUsuario.js" type="module"></script>
+        <script src="../js/iniciarSesion.js" type="module"></script>
+        <script src="../js/consultaReparaciones.js"></script>
+        <script src="../js/presupuestar.js"></script>
     </div>    
 </body>
-<!-- Modal -->
-<div class= "modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Estado del Equipo</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div id= "estadoReparacion" class="modal-body">
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
-            </div>
-        </div>
-    </div>
-</div>     
 </html>

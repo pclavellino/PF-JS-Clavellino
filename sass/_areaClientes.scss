@@ -8,15 +8,17 @@
     justify-content: center;
     align-items: center;
     p   {
-        margin-bottom: 5rem;
-    }
-    #botonConsultar {
-        width: 20rem;
-    }
-    #botonPresupuestar {
-        width: 20rem;
+        margin-bottom: 3rem;
     }
 }
+
+
+#login  {
+    padding: 2rem;
+    border: 3px solid colores.$colorNaranja;
+}
+
+
 
 #serviciosAdicionales   {
     display: flex;
@@ -63,7 +65,4 @@
             background-color: colores.$colorVioleta;
         }
     }
-
-
-
 }

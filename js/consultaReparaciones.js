@@ -47,6 +47,9 @@ const equiposAReparar = [
     }
 ]
 
+let botonConsultar = document.getElementById("botonConsultar");
+let ordenServicio = document.getElementById("ordenServicio");
+
 function consultarReparacion() {
     let nOrdenServicio = ordenServicio.value;
     const existeOrden = equiposAReparar.find((registro) => nOrdenServicio === registro.nOrden )
@@ -72,10 +75,6 @@ function consultarReparacion() {
         `
     }
 }
-
-
-let botonConsultar = document.getElementById("botonConsultar");
-let ordenServicio = document.getElementById("ordenServicio");
 
 botonConsultar.addEventListener("click", consultarReparacion);
 
