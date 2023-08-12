@@ -53,7 +53,7 @@
                         <h1 data-aos="fade-up">Área Clientes</h1>
                     </div>
                 </div>
-                <div class="row justify-content-center">
+                <div class="row justify-content-center" id="primeraFila">
                     <div class="col-sm-12 col-lg-5">
                         <section class="seccionPrincipal__areaClientes" data-aos="fade-up" data-aos-delay="250">
                             <h2>Registrate</h2>
@@ -82,12 +82,16 @@
                                 <label for="loginContraseña">Contraseña
                                     <input type="text" name="contraseña" id="loginContraseña">
                                 </label>
-                                <input type="button" value="Iniciar Sesión" id="iniciarSesion" class="botonFormulario">
+                                <input type="button" value="Iniciar Sesión" id="botonIniciarSesion" class="botonFormulario">
                             </form>
                         </section>
                     </div>
                 </div>
-                <div class="row justify-content-center">
+                <div class="row justify-content-center ocultar" id="segundaFila" >
+                    <div id="saludoBienvenida">
+                        <p id="nombreUsuario"></p>
+                        <input type="button" value="Cerrar Sesion" class="botonFormulario" id="botonCerrarSesion">
+                    </div>
                     <div class="col-sm-12 col-lg-5">
                         <section class="seccionPrincipal__areaClientes" data-aos="fade-up" data-aos-delay="250">
                         <h2>Consultá el estado de tu reparación</h2>

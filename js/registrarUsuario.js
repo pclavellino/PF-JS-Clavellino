@@ -26,8 +26,6 @@ function registrarUsuario() {
             title: 'Usuario registrado con exito',
         })  
     }
-    
-    console.log(usuariosRegistrados)
 
 }
 

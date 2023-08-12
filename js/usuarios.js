@@ -24,7 +24,6 @@ const usuariosRegistrados = [
         mail: "juanlopez@hotmail.com",
         contraseña: "jlopez23",
     },
-
 ]
 
 export default usuariosRegistrados;

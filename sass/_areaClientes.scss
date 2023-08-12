@@ -66,3 +66,24 @@
         }
     }
 }
+
+.ocultar    {
+    display: none !important;
+}
+
+#saludoBienvenida   {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    font-size: 2.2rem;
+    margin: 0 5rem 3rem 5rem;
+    padding: 0;
+    border-bottom: 3px solid colores.$colorNaranja; 
+}
+
+#botonCerrarSesion  {
+    font-size: 2.2rem;
+    margin: 1;
+}
