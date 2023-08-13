@@ -1,4 +1,5 @@
 let datosIngresados = [];
+let precioFinal = 0;
 
 function obtenerDatos() {
 
@@ -36,6 +37,9 @@ function obtenerDatos() {
     for ( i = 0; i <= datosIngresados.length; i++) {
         if (datosIngresados[i]?.incluir) {
             datosIngresados[i].cantidad = 1;
+            datosIngresados[i].incluir = "SI";
+        } else if (datosIngresados[i]?.incluir == false) {
+            datosIngresados[i].incluir = "NO";
         }
     }
         
@@ -48,14 +52,30 @@ function calcularPrecio() {
         precioTotal: elemento.precio * elemento.cantidad,
     }});
 
-    const precioFinal = subtotales.reduce((acumulador, servicio) => { return acumulador + servicio.precioTotal }, 0);
+    precioFinal = subtotales.reduce((acumulador, servicio) => { return acumulador + servicio.precioTotal }, 0);
 
+}
+
+function mostrarPresupuesto() {
+    const presupuestoAbono = document.getElementById("presupuestoAbono");
+
+    presupuestoAbono.innerHTML = `
+    <ul>
+        <li>Cantidad de Servidores: ${datosIngresados[0].cantidad} </li>
+        <li>Cantidad de Pcs: ${datosIngresados[1].cantidad} </li>
+        <li>Cantidad de Impresoras: ${datosIngresados[2].cantidad} </li>
+        <li>Incluir mantenimiento de Camaras de Seguridad: ${datosIngresados[3].incluir} </li>
+        <li>Incluir mantenimiento de Telefonía: ${datosIngresados[4].incluir} </li>
+    </ul>
+    <p>El Presupuesto de su abono mensual de Mantenimiento Informatico es de $ ${precioFinal}</p>
+    `
 }
 
 function presupuestar() {
 
     obtenerDatos();
     calcularPrecio();
+    mostrarPresupuesto();
 
 }
 

@@ -125,7 +125,7 @@
                                     Mantenimiento de red de telefonia
                                 </label>
                             </div>
-                            <input type="button" value="Presupuestar" id="botonPresupuestar" class="botonFormulario">
+                            <input type="button" value="Presupuestar" id="botonPresupuestar" class="botonFormulario" data-bs-toggle="modal" data-bs-target="#modalPresupuesto">
                         </form>                        
                         </section>  
                     </div>
@@ -197,7 +197,28 @@
                     </div>
                 </div>
             </div>
-        </div>    
+        </div>
+        
+        <!---------------------------------------------- Ventana Modal ----------------------------------------------->
+
+        <div class= "modal fade" id="modalPresupuesto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Presupuesto de Abono Informatico</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div id= "presupuestoAbono" class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        
+        <!----------------------------------------------- Scripts ---------------------------------------------------->
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
