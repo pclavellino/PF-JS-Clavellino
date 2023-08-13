@@ -1,16 +1,16 @@
-import usuariosRegistrados from "./usuarios.js";
+import usuariosRegistrados from "./baseDatosUsuarios.js";
+
+function Usuario(nombre, mail, contraseña) {
+    this.nombre = nombre.value;
+    this.mail = mail.value;
+    this.contraseña = contraseña.value;
+}
 
 function registrarUsuario() {
 
-    let nombre = document.getElementById("regNombre");
-    let mail = document.getElementById("regMail");
-    let contraseña = document.getElementById("regContraseña");
-
-    function Usuario(nombre, mail, contraseña) {
-        this.nombre = nombre.value;
-        this.mail = mail.value;
-        this.contraseña = contraseña.value;
-    }
+    const nombre = document.getElementById("regNombre");
+    const mail = document.getElementById("regMail");
+    const contraseña = document.getElementById("regContraseña");
 
     if (nombre.value == "" || mail.value == "" || contraseña.value == "") {
         Swal.fire({
@@ -19,14 +19,13 @@ function registrarUsuario() {
             text: 'Todos los campos son necesarios. Revise los datos e intente nuevamente',
         })
     } else {
-        let nuevoUsuario = new Usuario(nombre, mail, contraseña);
+        const nuevoUsuario = new Usuario(nombre, mail, contraseña);
         usuariosRegistrados.push(nuevoUsuario);
         Swal.fire({
             icon: 'success',
             title: 'Usuario registrado con exito',
         })  
     }
-
 }
 
 document.getElementById("registrarse").addEventListener("click", registrarUsuario);

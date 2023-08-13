@@ -1,5 +1,4 @@
 let datosIngresados = [];
-let precioFinal = 0;
 
 function obtenerDatos() {
 
@@ -26,21 +25,17 @@ function obtenerDatos() {
             incluir: document.getElementById("camarasSeguridad").checked,
         },
         {
-            nombre: "Servidores",
+            nombre: "Telefonia",
             precio: 3000,
             cantidad: 0,
             incluir: document.getElementById("telefonia").checked,
         },
 
     ]
-
-    for ( i = 0; i <= datosIngresados.length; i++) {
-        if (datosIngresados[i]?.incluir) {
-            datosIngresados[i].cantidad = 1;
-            datosIngresados[i].incluir = "SI";
-        } else if (datosIngresados[i]?.incluir == false) {
-            datosIngresados[i].incluir = "NO";
-        }
+    
+    for (const dato of datosIngresados) {
+        dato.cantidad = dato.incluir ? 1 : dato.cantidad;
+        dato.incluir = dato.incluir ? "SI" : "NO";
     }
         
 }
@@ -52,11 +47,11 @@ function calcularPrecio() {
         precioTotal: elemento.precio * elemento.cantidad,
     }});
 
-    precioFinal = subtotales.reduce((acumulador, servicio) => { return acumulador + servicio.precioTotal }, 0);
+    return subtotales.reduce((acumulador, servicio) => { return acumulador + servicio.precioTotal }, 0);
 
 }
 
-function mostrarPresupuesto() {
+function mostrarPresupuesto(precioFinal) {
     const presupuestoAbono = document.getElementById("presupuestoAbono");
 
     presupuestoAbono.innerHTML = `
@@ -74,8 +69,8 @@ function mostrarPresupuesto() {
 function presupuestar() {
 
     obtenerDatos();
-    calcularPrecio();
-    mostrarPresupuesto();
+    const precioFinal = calcularPrecio();
+    mostrarPresupuesto(precioFinal);
 
 }
 

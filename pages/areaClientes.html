@@ -59,14 +59,14 @@
                             <h2>Registrate</h2>
                             <p>Registrate para consultar y gestionar tus presupuestos y reparaciones</p>
                             <form class="formulario">
-                                <label for="regNombre">Nombre
+                                <label for="regNombre">Nombre Completo
                                     <input type="text" name="regNombre" id="regNombre" required>
                                 </label>
                                 <label for="regMail">Dirección de Correo
                                     <input type="mail" name="regMail" id="regMail" required>
                                 </label>
                                 <label for="regContraseña">Contraseña
-                                    <input type="text" name="regContraseña" id="regContraseña" required>
+                                    <input type="password" name="regContraseña" id="regContraseña" required>
                                 </label>
                                 <input type="button" value="Registrarse" id="registrarse" class="botonFormulario">
                             </form>
@@ -77,10 +77,10 @@
                             <h2>Iniciar Sesión</h2>
                             <form class="formulario">
                                 <label for="loginMail">Direccion de Correo
-                                    <input type="text" name="mail" id="loginMail">
+                                    <input type="mail" name="mail" id="loginMail">
                                 </label>
                                 <label for="loginContraseña">Contraseña
-                                    <input type="text" name="contraseña" id="loginContraseña">
+                                    <input type="password" name="contraseña" id="loginContraseña">
                                 </label>
                                 <input type="button" value="Iniciar Sesión" id="botonIniciarSesion" class="botonFormulario">
                             </form>
@@ -227,7 +227,8 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="../js/registrarUsuario.js" type="module"></script>
         <script src="../js/iniciarSesion.js" type="module"></script>
-        <script src="../js/consultaReparaciones.js"></script>
+        <script src="../js/cerrarSesion.js"></script>
+        <script src="../js/consultaReparaciones.js" type="module"></script>
         <script src="../js/presupuestar.js"></script>
     </div>    
 </body>

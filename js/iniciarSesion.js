@@ -1,4 +1,4 @@
-import usuariosRegistrados from "./usuarios.js";
+import usuariosRegistrados from "./baseDatosUsuarios.js";
 
 const sesionIniciada = JSON.parse(localStorage.getItem("Usuario"));
 const primeraFila = document.getElementById("primeraFila");
@@ -12,8 +12,8 @@ if (sesionIniciada) {
 }
 
 function iniciarSesion() {
-    let mail = document.getElementById("loginMail");
-    let contraseña = document.getElementById("loginContraseña");
+    const mail = document.getElementById("loginMail");
+    const contraseña = document.getElementById("loginContraseña");
 
     if (mail.value == "" || contraseña.value == "") {
         Swal.fire({
@@ -33,24 +33,16 @@ function iniciarSesion() {
             primeraFila.classList.add("ocultar");
             segundaFila.classList.remove("ocultar"); 
             nombreUsuario.innerHTML = 'Bienvenido ' + usuarioEncontrado.nombre;            
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Usuario no encontrado. Revise los datos ingresados e intente nuevamente',
+            })
         }
     }
 }
 
-function cerrarSesion() {
-    localStorage.clear();
-    Swal.fire({
-        icon: 'success',
-        title: 'Sesión cerrada exitosamente',
-    })
-    primeraFila.classList.remove("ocultar");
-    segundaFila.classList.add("ocultar"); 
-
-}
-
-
-
 document.getElementById("botonIniciarSesion").addEventListener("click", iniciarSesion);
 
-document.getElementById("botonCerrarSesion").addEventListener("click", cerrarSesion)
+
 
