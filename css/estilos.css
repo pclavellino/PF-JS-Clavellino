@@ -334,7 +334,7 @@ html {
 
 .seccionPrincipal__areaClientes {
   width: 70%;
-  margin: auto;
+  margin: 4rem auto 4rem auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -405,8 +405,9 @@ html {
   align-items: center;
   justify-content: center;
   vertical-align: middle;
+  width: 80%;
   font-size: 2.2rem;
-  padding: 0;
+  padding: 1rem;
   border-bottom: 3px solid #FF8100;
 }
 #saludoBienvenida p {
@@ -443,7 +444,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: start;
-  margin-bottom: 15rem;
+  margin-bottom: 7.5rem;
 }
 .formulario label {
   width: 100%;

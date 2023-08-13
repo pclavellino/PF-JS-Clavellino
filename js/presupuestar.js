@@ -1,5 +1,7 @@
 let datosIngresados = [];
 
+// ---------------------------Obtención de Datos------------------------------//
+
 function obtenerDatos() {
 
     datosIngresados = [
@@ -30,15 +32,15 @@ function obtenerDatos() {
             cantidad: 0,
             incluir: document.getElementById("telefonia").checked,
         },
-
     ]
     
     for (const dato of datosIngresados) {
         dato.cantidad = dato.incluir ? 1 : dato.cantidad;
         dato.incluir = dato.incluir ? "SI" : "NO";
-    }
-        
+    }     
 }
+
+//-----------------------------Calculo de Precio-----------------------------//
 
 function calcularPrecio() {
 
@@ -48,8 +50,9 @@ function calcularPrecio() {
     }});
 
     return subtotales.reduce((acumulador, servicio) => { return acumulador + servicio.precioTotal }, 0);
-
 }
+
+//--------------------------Muestra de Presupuesto---------------------------//
 
 function mostrarPresupuesto(precioFinal) {
     const presupuestoAbono = document.getElementById("presupuestoAbono");
@@ -71,7 +74,6 @@ function presupuestar() {
     obtenerDatos();
     const precioFinal = calcularPrecio();
     mostrarPresupuesto(precioFinal);
-
 }
 
 document.getElementById("botonPresupuestar").addEventListener("click", presupuestar);
