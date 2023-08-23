@@ -1,5 +1,5 @@
 import usuariosRegistrados from "./baseDatosUsuarios.js";
-
+    
 const sesionIniciada = JSON.parse(localStorage.getItem("Usuario"));
 const primeraFila = document.getElementById("primeraFila");
 const segundaFila = document.getElementById("segundaFila");
@@ -43,6 +43,5 @@ function iniciarSesion() {
 }
 
 document.getElementById("botonIniciarSesion").addEventListener("click", iniciarSesion);
-
 
 
