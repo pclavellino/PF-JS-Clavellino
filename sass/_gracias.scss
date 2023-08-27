@@ -1,0 +1,14 @@
+@use "assets/colores";
+
+#seccionGracias     {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1  {
+        font-size: 7rem;
+    }
+    p   {
+        font-size: 3rem;
+    }
+}

@@ -503,6 +503,19 @@ html {
   width: 100%;
 }
 
+#seccionGracias {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#seccionGracias h1 {
+  font-size: 7rem;
+}
+#seccionGracias p {
+  font-size: 3rem;
+}
+
 @media screen and (max-width: 960px) {
   .presentacion__mensajePrincipal h1 {
     font-size: 5rem;
