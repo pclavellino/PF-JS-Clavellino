@@ -109,11 +109,11 @@
                         <p>Completa el formulario para obtener un presupuesto de tu abono mensual en base a los equipos que tenes en tu empresa:</p>
                         <form class="formulario" id="formularioPresupuesto">
                             <label for="servidores">Cantidad de Servidores en su empresa:</label>
-                            <input type="text" name="servidores" id="servidores">
+                            <input type="number" name="servidores" id="servidores" class="servidores" value="0">
                             <label for="pcs">Cantidad de PC/Notebook en su empresa:</label>
-                            <input type="text" name="pcs" id="pcs">
+                            <input type="number" name="pcs" id="pcs" value="0">
                             <label for="impresoras">Cantidad de impresoras en su empresa:</label>
-                            <input type="text" name="impresoras" id="impresoras">
+                            <input type="number" name="impresoras" id="impresoras" value="0">
                             <div id="serviciosAdicionales">
                                 <h5>Servicios adicionales:</h5>
                                 <label for="camarasSeguridad">
@@ -188,7 +188,6 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title">Estado del Equipo</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div id= "estadoReparacion" class="modal-body">
                     </div>
@@ -201,17 +200,21 @@
         
         <!---------------------------------------------- Ventana Modal Presupuestos ----------------------------------------------->
 
-        <div class= "modal fade" id="modalPresupuesto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modalPresupuesto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Presupuesto de Abono Informatico</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h5 class="modal-title">Presupuesto de Abono Informático</h5>
+                        <p>Si es necesario, puede corregir los datos.</p>
                     </div>
                     <div id= "presupuestoAbono" class="modal-body">
                     </div>
+                    <div>
+                        <p>Precio Final</p>
+                        <span id="precioTotal"></span>
+                    </div>
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                    <button type="button" class="btn btn-primary" id="botonAceptarPresupuesto" data-bs-dismiss="modal">Aceptar</button>
                     </div>
                 </div>
             </div>

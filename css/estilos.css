@@ -424,6 +424,46 @@ html {
   box-shadow: 0px 0px 20px #541388 !important;
 }
 
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 2rem;
+}
+.item img {
+  width: 80px;
+  height: 80px;
+}
+.item h6 {
+  font-size: 1.6rem;
+  width: 14rem;
+  margin: 2rem;
+}
+.item input {
+  font-size: 2rem;
+  text-align: center;
+  width: 5rem;
+  height: 1lh;
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content p {
+  font-size: 2rem;
+  text-align: center;
+}
+
+#precioTotal {
+  display: block;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: bold;
+  color: green;
+}
+
 #seccionContacto {
   display: flex;
   flex-direction: column;

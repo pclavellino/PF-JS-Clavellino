@@ -6,29 +6,39 @@ function obtenerDatos() {
 
     datosIngresados = [
         {
+            id: "servidor",
             nombre: "Servidores",
-            precio: 1000,
+            imagen: "../images/servidor.png",
+            precio: 2000,
             cantidad: parseInt(document.getElementById("servidores").value),
         },
         {
+            id: "pc",
             nombre: "PC",
-            precio: 500,
+            imagen: "../images/pc.png",
+            precio: 1000,
             cantidad: parseInt(document.getElementById("pcs").value),
         },
-        {
+        {   
+            id: "impresora",
             nombre: "Impresoras",
-            precio: 250,
+            imagen: "../images/impresora.png",
+            precio: 500,
             cantidad: parseInt(document.getElementById("impresoras").value),
         },
-        {
-            nombre: "Camaras de Seguridad",
-            precio: 5000,
+        {   
+            id: "camaraSeguridad",
+            nombre: "Servicio de Mantenimiento de Cámaras de Seguridad (max 1)",
+            imagen: "../images/camara.png",
+            precio: 10000,
             cantidad: 0,
             incluir: document.getElementById("camarasSeguridad").checked,
         },
-        {
-            nombre: "Telefonia",
-            precio: 3000,
+        {   
+            id: "tel",
+            nombre: "Servicio de Mantenimiento de Red de Telefonía (max 1)",
+            imagen: "../images/telefono.png",
+            precio: 5000,
             cantidad: 0,
             incluir: document.getElementById("telefonia").checked,
         },
@@ -36,8 +46,8 @@ function obtenerDatos() {
     
     for (const dato of datosIngresados) {
         dato.cantidad = dato.incluir ? 1 : dato.cantidad;
-        dato.incluir = dato.incluir ? "SI" : "NO";
-    }     
+    } 
+    
 }
 
 //-----------------------------Calculo de Precio-----------------------------//
@@ -46,35 +56,51 @@ function calcularPrecio() {
 
     const subtotales = datosIngresados.map((elemento) => { return {
         nombre: elemento.nombre,
-        precioTotal: elemento.precio * elemento.cantidad,
+        subtotal: elemento.precio * elemento.cantidad,
     }});
 
-    return subtotales.reduce((acumulador, servicio) => { return acumulador + servicio.precioTotal }, 0);
+    return subtotales.reduce((acumulador, servicio) => { return acumulador + servicio.subtotal }, 0);
+
 }
 
 //--------------------------Muestra de Presupuesto---------------------------//
 
-function mostrarPresupuesto(precioFinal) {
+function armarPresupuesto(datosIngresados) {
     const presupuestoAbono = document.getElementById("presupuestoAbono");
+    const precioTotal = document.getElementById("precioTotal");
 
-    presupuestoAbono.innerHTML = `
-    <ul>
-        <li>Cantidad de Servidores: ${datosIngresados[0].cantidad} </li>
-        <li>Cantidad de Pcs: ${datosIngresados[1].cantidad} </li>
-        <li>Cantidad de Impresoras: ${datosIngresados[2].cantidad} </li>
-        <li>Incluir mantenimiento de Camaras de Seguridad: ${datosIngresados[3].incluir} </li>
-        <li>Incluir mantenimiento de Telefonía: ${datosIngresados[4].incluir} </li>
-    </ul>
-    <p>El Presupuesto de su abono mensual de Mantenimiento Informatico es de $ ${precioFinal}</p>
-    `
-}
+    for (i = 0; i < datosIngresados.length; i++) {
+        presupuestoAbono.innerHTML += `
+            <div class=item>
+                <img src="${datosIngresados[i].imagen}"/>
+                <h6>${datosIngresados[i].nombre}: </h6>
+                <input class="itemValues" id="${datosIngresados[i].id}" min=0 max="${datosIngresados[i].id === "camaraSeguridad" || datosIngresados[i].id === "tel" ? 1 : ""}"type=number value="${datosIngresados[i].cantidad}"/>
+            </div>`
+    }   
+
+    let inputs = document.getElementsByClassName("itemValues");
+    for (let i = 0; i < inputs.length; i++) {
+            inputs[i].addEventListener("input", () => {
+            let nuevoValor = inputs[i].value;
+            datosIngresados[i].cantidad = nuevoValor;
+            precioFinal = calcularPrecio(datosIngresados);
+            precioTotal.innerHTML = `$ ${precioFinal} /mes`
+        })
+    }
+
+};
 
 function presupuestar() {
-
     obtenerDatos();
-    const precioFinal = calcularPrecio();
-    mostrarPresupuesto(precioFinal);
+    armarPresupuesto(datosIngresados);
+    let precioFinal = calcularPrecio(datosIngresados)
+    precioTotal.innerHTML = `$ ${precioFinal}`
 }
 
+let precioFinal = 0;
+
 document.getElementById("botonPresupuestar").addEventListener("click", presupuestar);
+document.getElementById("botonAceptarPresupuesto").addEventListener("click", () => {
+    document.getElementById("presupuestoAbono").innerHTML = "";
+})
 

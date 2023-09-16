@@ -95,3 +95,46 @@
         }
     }
 }
+
+.item   {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2rem;
+
+    img     {
+        width: 80px;
+        height: 80px;
+    }
+    h6  {
+        font-size: 1.6rem;
+        width: 14rem;
+        margin: 2rem;
+    }
+    input   {
+        font-size: 2rem;
+        text-align: center;
+        width: 5rem;
+        height: 1lh;
+    }
+}
+
+.modal-header   {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content {
+    p {
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+#precioTotal     {
+    display: block;
+    font-size: 4rem;
+    text-align: center;
+    font-weight: bold;
+    color: green;
+}
