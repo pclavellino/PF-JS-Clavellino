@@ -94,7 +94,7 @@ function presupuestar() {
     obtenerDatos();
     armarPresupuesto(datosIngresados);
     let precioFinal = calcularPrecio(datosIngresados)
-    precioTotal.innerHTML = `$ ${precioFinal}`
+    precioTotal.innerHTML = `$ ${precioFinal} /mes`
 }
 
 let precioFinal = 0;
