@@ -7,21 +7,21 @@ function obtenerDatos() {
     datosIngresados = [
         {
             id: "servidor",
-            nombre: "Servidores",
+            nombre: "Cantidad de Servidores",
             imagen: "../images/servidor.png",
             precio: 2000,
             cantidad: parseInt(document.getElementById("servidores").value),
         },
         {
             id: "pc",
-            nombre: "PC",
+            nombre: "Cantidad de PC",
             imagen: "../images/pc.png",
             precio: 1000,
             cantidad: parseInt(document.getElementById("pcs").value),
         },
         {   
             id: "impresora",
-            nombre: "Impresoras",
+            nombre: "Cantidad de Impresoras",
             imagen: "../images/impresora.png",
             precio: 500,
             cantidad: parseInt(document.getElementById("impresoras").value),
